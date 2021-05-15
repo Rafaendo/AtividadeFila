@@ -78,22 +78,24 @@ int cheia(){
 
 void exibir(){
 
-  if(vazia()){
-
-    printf("Fila vazia!");
-
-  }
-  else{
-
-    for(int i=0; i<ultimaPosicao; i++){
-      printf("%i\n", fila[i]);
+int vazia()
+{
+    int resultado = 1;
+    //Se resultado=1 significa que todos estão vazios e se for = 0 ele tem algum espaço cheio.
+    for (int i = 0; i < TAM_FILA; i++) {
+        //Checa cada item para ver se não estão vazios
+        if (fila[i] != 0) {
+            resultado = 0;
+        }
     }
+    return resultado;
+}
 
+
+
+
+if(ultimaPosicaoVazia == 0){
+    return 1;
+  }else{
+    return 0;
   }
-
-}
-
-  exibir();
-
-  return 0;
-}
